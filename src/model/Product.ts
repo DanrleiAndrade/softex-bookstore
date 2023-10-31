@@ -1,4 +1,4 @@
-import { iProduct } from "./iProduct"
+import { iProduct } from "./interface/iProduct"
 
 export class Product{
     private id: number

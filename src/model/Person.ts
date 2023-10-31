@@ -1,4 +1,4 @@
-import { iPerson } from "./iPerson"
+import { iPerson } from "./interface/iPerson"
 
 export abstract class Person implements iPerson{
     private id: number

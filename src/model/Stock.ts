@@ -1,4 +1,4 @@
-import { iStock } from "./iStock"
+import { iStock } from "./interface/iStock"
 
 export class Stock implements iStock{
     private id: number

@@ -1,4 +1,4 @@
-import { iOrdem } from "./iOrder"
+import { iOrdem } from "./interface/iOrder"
 
 export class Order implements iOrdem{
     private id: number
