@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import { iPerson } from "./interface/iPerson"
+=======
+import { iPerson } from "../interface/iPerson"
+>>>>>>> 5f97128ce1a7c401a506e40e302921114d35ae0c
 
 export abstract class Person implements iPerson{
     private id: number
