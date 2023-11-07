@@ -33,6 +33,7 @@ Client.init({
     //Para puxar a data atual defaultValue: Sequelize.literal('CURRENT_TIMESTAMP')
     registeredAt: {
         type: sequelize.DATE,
+        defaultValue: sequelize.literal('CURRENT_TIMESTAMP'),
         allowNull: false
     },
 }, { 
