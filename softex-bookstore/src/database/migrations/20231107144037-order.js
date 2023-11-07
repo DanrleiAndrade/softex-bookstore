@@ -3,7 +3,13 @@
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up (queryInterface, Sequelize) {
-    await queryInterface.createTable('purchase',{
+    await queryInterface.createTable('order', {
+      id: {
+        type: Sequelize.INTEGER,
+        allowNull: false,
+        autoIncrement: true,
+        primaryKey: true
+      },
       client_id: {
         type: Sequelize.INTEGER,
         allowNull: false,
@@ -14,18 +20,19 @@ module.exports = {
         onDelete: 'CASCADE',
         onUpdate: 'CASCADE',
       },
-      product_id: {
+      total: {
         type: Sequelize.INTEGER,
-        allowNull: false,
-        references: {
-          model: 'product',
-          key: 'id',
-        },
+        allowNull:false
+      },
+      date: {
+        type: Sequelize.DATE,
+        defaultValue: Sequelize.literal('CURRENT_TIMESTAMP'),
+        allowNull: false
       }
-    },)
+    })
   },
 
   async down (queryInterface, Sequelize) {
-    await queryInterface.dropTable('purchare')
+    await queryInterface.dropTable('order')
   }
 };

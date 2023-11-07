@@ -25,6 +25,7 @@ module.exports = {
       //Para puxar a data atual defaultValue: Sequelize.literal('CURRENT_TIMESTAMP')
       registeredAt: {
         type: Sequelize.DATE,
+        defaultValue: Sequelize.literal('CURRENT_TIMESTAMP'),
         allowNull: false
       },
     })
