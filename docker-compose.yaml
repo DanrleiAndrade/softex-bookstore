@@ -2,7 +2,7 @@ version: '3'
 
 services:
   -sequelize:
-    build: ./ts-Sequelize
+    build: ./softex-bookstore
     ports:
       - 3001:3001
     environment:
@@ -11,7 +11,7 @@ services:
       - DB_NAME=bookstore
       - DB_HOST=db
     volumes:
-      - ./ts-Sequelize:/app-crud
+      - ./softex-bookstore:/app-crud
     container_name: bookstore_crud
     restart: always
     depends_on:
