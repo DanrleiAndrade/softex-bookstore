@@ -12,7 +12,7 @@ services:
       - DB_HOST=db
     volumes:
       - ./softex-bookstore:/app-crud
-    container_name: bookstore_crud
+    container_name: projeto_bookstore
     restart: always
     depends_on:
       - db
