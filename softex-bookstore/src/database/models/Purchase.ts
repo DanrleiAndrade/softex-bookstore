@@ -39,14 +39,14 @@ Purchase.init({
 Client.belongsToMany(Product, {
     foreignKey: 'clientId',
     otherKey: 'productId',
-    as: 'product',
+    as: 'products',
     through: Purchase
 })
 
 Product.belongsToMany(Client, {
     foreignKey: 'productId',
     otherKey: 'clientId',
-    as: 'client',
+    as: 'clients',
     through: Purchase
 })
 
